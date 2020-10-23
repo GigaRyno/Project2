@@ -27,23 +27,23 @@ else
         do
             user="$(getUser $line)" #gets usernames from the file and then cuts from the @ back to make the username
             pass="$(makePass)" #generates a 12 charcter password using openssl
-            if [ "$(cat /etc/group | grep 'CSI230' | wc -l)" == 0 ]
+            if [ "$(cat /etc/group | grep 'CSI230')" ] #checks to see if group exist
             then
                 groupadd "CSI230"
             fi 
 
-            if [ "$(cat /etc/passwd | grep $user | wc -l)" == 0 ]
+            if [ "$(cat /etc/passwd | grep $user)" ] #checks to see if user already exist
             then
                 sudo useradd -m -s /bin/bash $user
             fi
 
-            echo "$user:$pass" | chpasswd
-            ( echo "You password is: $pass" | ssmtp $line )
-            chage --lastday 0 $user
-            usermod -a -G CSI230 $user
+            echo "$user:$pass" | chpasswd 
+            $ echo "You password is: $pass" | mail -s "Password changed" $line #is supposed to send email to user with updated info
+            chage --lastday 0 $user #forces user to change password
+            usermod -a -G CSI230 $user #puts user in group for CSI230
         done
     else
-        echo "File does not exist"
+        echo "File does not exist" #if file does not exist it exits
         exit
     fi
 fi
