@@ -14,3 +14,5 @@ Project 2 CSI230
 * Im going to try to add implenation of a few other things so I can get some points for this assignment
 * Added check to see if group exist and if not then it creates it
 * Added check to see if user already exis
+* I Think I have it figured out how to send emails but Im not receving them and my thing still keeps coming up with errors baecause of the 'smmsp' and 'smmta'
+* Im throwing in the white flag. I have wasted too much time on this
