@@ -12,3 +12,5 @@ Project 2 CSI230
   * I think im going to back up my VM and create a new one seems to be the only way people on the internet have fixed it. Sense I am running out of time I am just going to hand in what I have and I will hopefully make up for it on the next thing
   
 * Im going to try to add implenation of a few other things so I can get some points for this assignment
+* Added check to see if group exist and if not then it creates it
+* Added check to see if user already exis
