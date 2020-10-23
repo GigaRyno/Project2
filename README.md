@@ -10,3 +10,5 @@ Project 2 CSI230
 * VM seems to be having issues with installing anytype of mail server.
   * I have tried installing sendmail that didn't work so I uninstalled it and then installed postfix and now I cant do anything because it will not let me due to 'smmsp' and 'smmta' not being a user in the root of my vm
   * I think im going to back up my VM and create a new one seems to be the only way people on the internet have fixed it. Sense I am running out of time I am just going to hand in what I have and I will hopefully make up for it on the next thing
+  
+* Im going to try to add implenation of a few other things so I can get some points for this assignment
